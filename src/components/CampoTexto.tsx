@@ -23,7 +23,7 @@ export default function CampoTexto(props: CampoTextoProps) {
         onBlur={onBlur}
         value={value}
       />
-      {errors ? <Text>{errors}</Text> : null}
+      {errors ? <Text style={styles.form_input_erro}>{errors}</Text> : null}
     </View>
   );
 }
@@ -37,4 +37,7 @@ const styles = StyleSheet.create({
     width: 140,
     borderRadius: 8,
   },
+  form_input_erro: {
+    color: "red"
+  }
 });
